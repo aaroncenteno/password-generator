@@ -29,6 +29,35 @@ var lowerCase = [
   "z"
 ];
 
+// Uppper Case Variables 
+var UpperCase = [
+  "A",
+  "B",
+  "C",
+  "D",
+  "E",
+  "F",
+  "G",
+  "H",
+  "I",
+  "J",
+  "K",
+  "L",
+  "M",
+  "N",
+  "O",
+  "P",
+  "Q",
+  "R",
+  "S",
+  "T",
+  "U",
+  "V",
+  "W",
+  "X",
+  "Y",
+  "Z"
+];
 function passwordCriteria () {
   var length = parseInt (
     prompt("Enter the amount of characters you would like in your password.")
