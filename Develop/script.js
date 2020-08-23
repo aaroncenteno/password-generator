@@ -1,6 +1,14 @@
-// Assignment code here
+function passwordCriteria () {
+  var length = parseInt (
+    prompt("Enter the amount of characters you would like in your password.")
+  );
+}
 
+function generatePassword() {
+  var options = passwordCriteria();
+}
 
+// Code Given
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
