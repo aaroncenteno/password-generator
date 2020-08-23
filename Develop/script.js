@@ -30,7 +30,7 @@ var lowerCase = [
 ];
 
 // Uppper Case Variables 
-var UpperCase = [
+var upperCase = [
   "A",
   "B",
   "C",
@@ -73,7 +73,7 @@ var numberOptions = [
   "9"
 ];
 
-var speacialCharacters = [
+var specialCharacters = [
   "!",
   "@",
   "#",
@@ -85,7 +85,8 @@ var speacialCharacters = [
   "/",
   "?"
 ];
-function passwordCriteria () {
+
+function askPasswordCriteria() {
   var length = parseInt (
     prompt("Enter the amount of characters you would like in your password.")
   );
@@ -94,18 +95,33 @@ function passwordCriteria () {
     var containLowerCase = confirm("Would you like to have lower case letters in your password?");
     var containUpperCase = confirm("Would you like to have upper case letters in your password?");
     var containNumberOptions = confirm("Would you like to have numbers in your password?");
-    var containSpeacialCharacters = confirm("Would you like to have special characters in your password?");
+    var containSpecialCharacters = confirm("Would you like to have special characters in your password?");
   } else {
     alert("Please choose a character amount between 1 and 128!");
   }
+  var passwordCriteria = {
+    length: length,
+    containLowerCase: containLowerCase,
+    containUpperCase: containUpperCase,
+    containNumberOptions: containNumberOptions,
+    containSpecialCharacters: containSpecialCharacters
+  };
+  return passwordCriteria;
+}
+
+function randomizer(arr) {
+  var randomIndex = Math.floor(Math.random() * arr.length);
+  var randomElement = arr[randomIndex];
+  return randomElement;
 }
 
 function generatePassword() {
-  var options = passwordCriteria();
+  var options = askPasswordCriteria();
+  var result = [];
+  var possibleCharacters = [];
+  var guaranteedCharacters = [];
+
 }
-
-
-
 // Code Given
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
