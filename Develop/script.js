@@ -73,6 +73,7 @@ var numberOptions = [
   "9"
 ];
 
+// Special characters variable
 var specialCharacters = [
   "!",
   "@",
@@ -86,6 +87,7 @@ var specialCharacters = [
   "?"
 ];
 
+// Ask User for password criteria and give confirmation
 function askPasswordCriteria() {
   var length = parseInt (
     prompt("Enter the amount of characters you would like in your password.")
@@ -127,12 +129,29 @@ function randomizer(arr) {
   return randomElement;
 }
 
+//  Generate password function
 function generatePassword() {
   var options = askPasswordCriteria();
   var result = [];
   var possibleCharacters = [];
   var guaranteedCharacters = [];
 
+  if (options.containLowerCase) {
+    possibleCharacters = possibleCharacters.concat(lowerCase);
+    guaranteedCharacters.push(randomizer(lowerCase));
+  }
+  if (options.containUpperCase) {
+    possibleCharacters = possibleCharacters.concat(upperCase);
+    guaranteedCharacters.push(randomizer(upperCase));
+  }
+  if (options.containNumberOptions) {
+    possibleCharacters = possibleCharacters.concat(lowerCase);
+    guaranteedCharacters.push(randomizer(numberOptions));
+  }
+  if (options.containSpecialCharacters) {
+    possibleCharacters = possibleCharacters.concat(specialCharacters);
+    guaranteedCharacters.push(randomizer(specialCharacters));
+  }
 
 }
 // Code Given
