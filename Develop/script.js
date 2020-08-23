@@ -91,11 +91,23 @@ function askPasswordCriteria() {
     prompt("Enter the amount of characters you would like in your password.")
   );
 
-  if (length >= 8) {
+  if (length >= 8 && length < 128) {
     var containLowerCase = confirm("Would you like to have lower case letters in your password?");
+    if (containLowerCase){
+      window.alert ("Password WILL contain lower case letters.");
+    } else window.alert ("Password will NOT contain lower case letters.");
     var containUpperCase = confirm("Would you like to have upper case letters in your password?");
+    if (containUpperCase){
+      window.alert ("Password WILL contain upper case letters.");
+    } else window.alert ("Password will NOT contain upper case letters.");
     var containNumberOptions = confirm("Would you like to have numbers in your password?");
+    if (containNumberOptions){
+      window.alert ("Password WILL contain numbers.");
+    } else window.alert ("Password will NOT contain numbers.");
     var containSpecialCharacters = confirm("Would you like to have special characters in your password?");
+    if (containSpecialCharacters){
+      window.alert ("Password WILL contain special characters.");
+    } else window.alert ("Password will NOT contain special characters.");
   } else {
     alert("Please choose a character amount between 1 and 128!");
   }
@@ -120,6 +132,7 @@ function generatePassword() {
   var result = [];
   var possibleCharacters = [];
   var guaranteedCharacters = [];
+
 
 }
 // Code Given
