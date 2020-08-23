@@ -2,11 +2,20 @@ function passwordCriteria () {
   var length = parseInt (
     prompt("Enter the amount of characters you would like in your password.")
   );
+
+  if (length >= 8) {
+    var containLowerCase = confirm("Would you like to have lower case letters in your password?");
+    var containUpperCase = confirm("Would you like to have upper case letters in your password?");
+    var containNumberOptions = confirm("Would you like to have numbers in your password?")
+    var containSpeacialCharacters = confirm("Would you like to have special characters in your password?")
+  }
 }
 
 function generatePassword() {
   var options = passwordCriteria();
 }
+
+
 
 // Code Given
 // Get references to the #generate element
