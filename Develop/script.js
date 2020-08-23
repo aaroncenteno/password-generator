@@ -58,6 +58,33 @@ var UpperCase = [
   "Y",
   "Z"
 ];
+
+// Numbers variable 
+var numberOptions = [
+  "0",
+  "1",
+  "2",
+  "3",
+  "4",
+  "5",
+  "6",
+  "7",
+  "8",
+  "9"
+];
+
+var speacialCharacters = [
+  "!",
+  "@",
+  "#",
+  "$",
+  "%",
+  "^",
+  "&",
+  "*",
+  "/",
+  "?"
+];
 function passwordCriteria () {
   var length = parseInt (
     prompt("Enter the amount of characters you would like in your password.")
