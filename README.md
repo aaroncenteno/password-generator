@@ -21,7 +21,7 @@ Provided great help to reviewing the code.
 
 ## Screen Shot of live URL
 
-![Screenshot of live URL](/live-url.png "Live URL")
+![Screenshot of live URL](/assets/live-url.png "Live URL")
 
 ## Link
 
