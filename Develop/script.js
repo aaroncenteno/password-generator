@@ -152,7 +152,14 @@ function generatePassword() {
     possibleCharacters = possibleCharacters.concat(specialCharacters);
     guaranteedCharacters.push(randomizer(specialCharacters));
   }
-
+  for (i = 0; i < options.length; i++) {
+    var characters = randomizer(possibleCharacters);
+    result.push(characters);
+  }
+  for (i = 0; i < guaranteedCharacters.length; i++) {
+    result[i] = guaranteedCharacters[i];
+  }
+  return result.join("");
 }
 // Code Given
 // Get references to the #generate element
